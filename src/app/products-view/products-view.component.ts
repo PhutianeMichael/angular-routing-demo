@@ -12,7 +12,7 @@ import { BreadcrumbsComponent } from '../shared-ui/breadcrumbs/breadcrumbs.compo
   ],
   selector: 'app-products-view',
   templateUrl: './products-view.component.html',
-  styleUrls: ['./products-view.component.scss']
+  styleUrls: ['./products-view.component.scss'],
 })
 export class ProductsViewComponent {
 }

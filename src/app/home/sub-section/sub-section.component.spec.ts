@@ -8,9 +8,9 @@ describe('SubSectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SubSectionComponent ]
+      declarations: [SubSectionComponent],
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(SubSectionComponent);
     component = fixture.componentInstance;

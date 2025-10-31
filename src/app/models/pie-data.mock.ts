@@ -2,10 +2,33 @@ import { Category, Pie } from './pie';
 
 export const PIES: Pie[] = [
   {
-    id: 1,
+    id: '4',
     category: Category.CHEESECAKE,
-    image: 'images/cheesecake-1.png',
-    thumb: 'images/cheesecake-1-thumb.png',
+    image: '../../images/cheesecake-4.png',
+    thumb: '../../images/cheesecake-4-thumb.png',
+    title: 'Birthday Cheesecake',
+    price: 18.95,
+    ingredients: [
+      'cream cheese',
+      'sugar',
+      'eggs',
+      'sprinkles',
+      'vanilla',
+      'milk',
+      'butter',
+      'wheat flour',
+      'corn starch',
+      'palm oil',
+      'leavening',
+      'salt',
+    ],
+    description: 'This is a vanilla cheesecake with multi colored sprinkles baked inside. It is topped with delicate frosting roses and baked in a thin cake like crust. This can be frozen for up to six months.',
+  },
+  {
+    id: '1',
+    category: Category.CHEESECAKE,
+    image: '../../images/cheesecake-1.png',
+    thumb: '../../images/cheesecake-1-thumb.png',
     title: 'Original Cheesecake',
     ingredients: [
       'cream cheese',
@@ -22,13 +45,13 @@ export const PIES: Pie[] = [
       'salt',
     ],
     price: 18.95,
-    description: 'This deliciously creamy perfectly sweet cheesecake is baked to perfection. A crisp graham cracker crust lines the bottom of the cheesecake. Can be frozen for up to six months, simply defrost to serve!'
+    description: 'This deliciously creamy perfectly sweet cheesecake is baked to perfection. A crisp graham cracker crust lines the bottom of the cheesecake. Can be frozen for up to six months, simply defrost to serve!',
   },
   {
-    id: 2,
+    id: '2',
     category: Category.CHEESECAKE,
-    image: 'images/cheesecake-2.png',
-    thumb: 'images/cheesecake-2-thumb.png',
+    image: '../../images/cheesecake-2.png',
+    thumb: '../../images/cheesecake-2-thumb.png',
     title: 'Strawberry Cheesecake',
     ingredients: [
       'cream cheese',
@@ -44,14 +67,14 @@ export const PIES: Pie[] = [
       'salt',
     ],
     price: 18.95,
-    description: 'Fresh strawberries top this deliciously creamy perfectly sweet cheesecake. A thin pastry crust lines the bottom of the cheesecake. Berries arrive separately for freshness.'
+    description: 'Fresh strawberries top this deliciously creamy perfectly sweet cheesecake. A thin pastry crust lines the bottom of the cheesecake. Berries arrive separately for freshness.',
 
   },
   {
-    id: 3,
+    id: '3',
     category: Category.CHEESECAKE,
-    image: 'images/cheesecake-3.png',
-    thumb: 'images/cheesecake-3-thumb.png',
+    image: '../../images/cheesecake-3.png',
+    thumb: '../../images/cheesecake-3-thumb.png',
     title: 'Chocolate Cheesecake',
     price: 18.95,
     ingredients: [
@@ -70,37 +93,13 @@ export const PIES: Pie[] = [
       'leavening',
       'salt',
     ],
-    description: 'This delightfully chocolate cheesecake is baked to perfection and served with a heaping portion of toasted hazelnuts. A crisp chocolatey cracker crust lines the bottom of the cheesecake. Can be frozen for up to six months, simply defrost to serve!'
+    description: 'This delightfully chocolate cheesecake is baked to perfection and served with a heaping portion of toasted hazelnuts. A crisp chocolatey cracker crust lines the bottom of the cheesecake.',
   },
   {
-    id: 4,
+    id: '5',
     category: Category.CHEESECAKE,
-    image: 'images/cheesecake-4.png',
-    thumb: 'images/cheesecake-4-thumb.png',
-    title: 'Birthday Cheesecake',
-    price: 18.95,
-    ingredients: [
-      'cream cheese',
-      'sugar',
-      'eggs',
-      'sprinkles',
-      'vanilla',
-      'milk',
-      'butter',
-      'wheat flour',
-      'corn starch',
-      'palm oil',
-      'leavening',
-      'salt',
-    ],
-    description: 'This cheesecake is a celebration waiting to happen. This is a vanilla cheesecake with multi colored sprinkles baked inside. It is topped with delicate frosting roses and baked in a thin cake like crust. This can be frozen for up to six months.'
-
-  },
-  {
-    id: 5,
-    category: Category.CHEESECAKE,
-    image: 'images/cheesecake-5.png',
-    thumb: 'images/cheesecake-5-thumb.png',
+    image: '../../images/cheesecake-5.png',
+    thumb: '../../images/cheesecake-5-thumb.png',
     title: 'Caramel Cheesecake',
     price: 18.95,
     ingredients: [
@@ -112,13 +111,13 @@ export const PIES: Pie[] = [
       'butter',
       'popcorn',
     ],
-    description: 'This crust-less cheese cake is almost flan like in texture. This traditional vanilla flavored cheesecake custard is topped with house-made caramel sauce and sprinkled with kettle corn.'
+    description: 'This crust-less cake is flan like in texture. This traditional vanilla flavored cheesecake custard is topped with caramel sauce and sprinkled with kettle corn.',
   },
   {
-    id: 6,
+    id: '6',
     category: Category.CHEESECAKE,
-    image: 'images/cheesecake-6.png',
-    thumb: 'images/cheesecake-6-thumb.png',
+    image: '../../images/cheesecake-6.png',
+    thumb: '../../images/cheesecake-6-thumb.png',
     title: 'Pistachio Cheesecake',
     price: 18.95,
     ingredients: [
@@ -137,13 +136,13 @@ export const PIES: Pie[] = [
       'leavening',
       'salt',
     ],
-    description: 'This picnic favorite is a chilled cheesecake. We start with a graham cracker crust then we fill it with delicious pistachio cream filling. It is topped with toasted pistachio nuts.'
+    description: 'This picnic favorite is a chilled cheesecake. We start with a graham cracker crust then we fill it with delicious pistachio cream filling. It is topped with toasted pistachio nuts.',
   },
   {
-    id: 7,
+    id: '7',
     category: Category.FRUIT_PIE,
-    image: 'images/apple-pie.jpg',
-    thumb: 'images/apple-pie-thumb.jpg',
+    image: '../../images/apple-pie.jpg',
+    thumb: '../../images/apple-pie-thumb.jpg',
     title: 'Apple Pie',
     price: 15.95,
     ingredients: [
@@ -158,33 +157,13 @@ export const PIES: Pie[] = [
       'leavening',
       'salt',
     ],
-    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.'
+    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.',
   },
   {
-    id: 8,
+    id: '9',
     category: Category.FRUIT_PIE,
-    image: 'images/strawberry-pie.jpg',
-    thumb: 'images/strawberry-pie-thumb.jpg',
-    title: 'Strawberry Pie',
-    price: 15.95,
-    ingredients: [
-      'strawberries',
-      'sugar',
-      'vanilla',
-      'butter',
-      'wheat flour',
-      'corn starch',
-      'palm oil',
-      'leavening',
-      'salt',
-    ],
-    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.'
-  },
-  {
-    id: 9,
-    category: Category.FRUIT_PIE,
-    image: 'images/blueberry-pie.jpg',
-    thumb: 'images/blueberry-pie-thumb.jpg',
+    image: '../../images/blueberry-pie.jpg',
+    thumb: '../../images/blueberry-pie-thumb.jpg',
     title: 'Blueberry Pie',
     price: 15.95,
     ingredients: [
@@ -198,13 +177,33 @@ export const PIES: Pie[] = [
       'leavening',
       'salt',
     ],
-    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.'
+    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.',
   },
   {
-    id: 10,
+    id: '8',
     category: Category.FRUIT_PIE,
-    image: 'images/raspberry-pie.jpg',
-    thumb: 'images/raspberry-pie-thumb.jpg',
+    image: '../../images/strawberry-pie.jpg',
+    thumb: '../../images/strawberry-pie-thumb.jpg',
+    title: 'Strawberry Pie',
+    price: 15.95,
+    ingredients: [
+      'strawberries',
+      'sugar',
+      'vanilla',
+      'butter',
+      'wheat flour',
+      'corn starch',
+      'palm oil',
+      'leavening',
+      'salt',
+    ],
+    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.',
+  },
+  {
+    id: '10',
+    category: Category.FRUIT_PIE,
+    image: '../../images/raspberry-pie.jpg',
+    thumb: '../../images/raspberry-pie-thumb.jpg',
     title: 'Raspberry Pie',
     price: 15.95,
     ingredients: [
@@ -218,13 +217,13 @@ export const PIES: Pie[] = [
       'leavening',
       'salt',
     ],
-    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.'
+    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.',
   },
   {
-    id: 11,
+    id: '11',
     category: Category.FRUIT_PIE,
-    image: 'images/peach-pie.jpg',
-    thumb: 'images/peach-pie-thumb.jpg',
+    image: '../../images/peach-pie.jpg',
+    thumb: '../../images/peach-pie-thumb.jpg',
     title: 'Peach Pie',
     price: 15.95,
     ingredients: [
@@ -239,13 +238,13 @@ export const PIES: Pie[] = [
       'leavening',
       'salt',
     ],
-    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.'
+    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.',
   },
   {
-    id: 12,
+    id: '12',
     category: Category.FRUIT_PIE,
-    image: 'images/cherry-pie.jpg',
-    thumb: 'images/cherry-pie-thumb.jpg',
+    image: '../../images/cherry-pie.jpg',
+    thumb: '../../images/cherry-pie-thumb.jpg',
     title: 'Cherry Pie',
     price: 15.95,
     ingredients: [
@@ -259,13 +258,13 @@ export const PIES: Pie[] = [
       'leavening',
       'salt',
     ],
-    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.'
+    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.',
   },
   {
-    id: 13,
+    id: '13',
     category: Category.SEASONAL_PIE,
-    image: 'images/pumpkin-pie.jpg',
-    thumb: 'images/pumpkin-pie-thumb.jpg',
+    image: '../../images/pumpkin-pie.jpg',
+    thumb: '../../images/pumpkin-pie-thumb.jpg',
     title: 'Pumpkin Pie',
     price: 15.95,
     ingredients: [
@@ -282,13 +281,13 @@ export const PIES: Pie[] = [
       'leavening',
       'salt',
     ],
-    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.'
+    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.',
   },
   {
-    id: 14,
+    id: '14',
     category: Category.SEASONAL_PIE,
-    image: 'images/pecan-pie.jpg',
-    thumb: 'images/pecan-pie-thumb.jpg',
+    image: '../../images/pecan-pie.jpg',
+    thumb: '../../images/pecan-pie-thumb.jpg',
     title: 'Pecan Pie',
     price: 15.95,
     ingredients: [
@@ -304,13 +303,13 @@ export const PIES: Pie[] = [
       'leavening',
       'salt',
     ],
-    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.'
+    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.',
   },
   {
-    id: 15,
+    id: '15',
     category: Category.SEASONAL_PIE,
-    image: 'images/chocolate-cream-pie.jpg',
-    thumb: 'images/chocolate-cream-pie-thumb.jpg',
+    image: '../../images/chocolate-cream-pie.jpg',
+    thumb: '../../images/chocolate-cream-pie-thumb.jpg',
     title: 'Chocolate Cream Pie',
     price: 15.95,
     ingredients: [
@@ -327,13 +326,13 @@ export const PIES: Pie[] = [
       'leavening',
       'salt',
     ],
-    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.'
+    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.',
   },
   {
-    id: 16,
+    id: '16',
     category: Category.SEASONAL_PIE,
-    image: 'images/custard-pie.jpg',
-    thumb: 'images/custard-pie-thumb.jpg',
+    image: '../../images/custard-pie.jpg',
+    thumb: '../../images/custard-pie-thumb.jpg',
     title: 'Custard Pie',
     price: 15.95,
     ingredients: [
@@ -349,13 +348,13 @@ export const PIES: Pie[] = [
       'leavening',
       'salt',
     ],
-    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.'
+    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.',
   },
   {
-    id: 17,
+    id: '17',
     category: Category.SEASONAL_PIE,
-    image: 'images/fresh-strawberry-pie.jpg',
-    thumb: 'images/fresh-strawberry-pie-thumb.jpg',
+    image: '../../images/fresh-strawberry-pie.jpg',
+    thumb: '../../images/fresh-strawberry-pie-thumb.jpg',
     title: 'Fresh Strawberry Pie',
     price: 15.95,
     ingredients: [
@@ -370,13 +369,13 @@ export const PIES: Pie[] = [
       'leavening',
       'salt',
     ],
-    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.'
+    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.',
   },
   {
-    id: 18,
+    id: '18',
     category: Category.SEASONAL_PIE,
-    image: 'images/banana-cream-pie.jpg',
-    thumb: 'images/banana-cream-pie-thumb.jpg',
+    image: '../../images/banana-cream-pie.jpg',
+    thumb: '../../images/banana-cream-pie-thumb.jpg',
     title: 'Banana Cream Pie',
     price: 15.95,
     ingredients: [
@@ -395,7 +394,7 @@ export const PIES: Pie[] = [
       'leavening',
       'salt',
     ],
-    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.'
+    description: 'What could be better than homemade apple pie! This family favorite features tart fresh apples sprinkled with just the right amount of cinnamon and sugar, baked in a flaky lattice top pastry.',
   },
 
 ];

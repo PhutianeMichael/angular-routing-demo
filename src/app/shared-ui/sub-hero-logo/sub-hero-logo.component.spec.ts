@@ -8,9 +8,9 @@ describe('SubHeroLogoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SubHeroLogoComponent ]
+      declarations: [SubHeroLogoComponent],
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(SubHeroLogoComponent);
     component = fixture.componentInstance;

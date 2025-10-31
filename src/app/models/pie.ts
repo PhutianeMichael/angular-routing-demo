@@ -1,4 +1,5 @@
 export interface Pie {
+  id: string;
   image: string;
   thumb: string;
   title: string;
@@ -6,7 +7,7 @@ export interface Pie {
   description: string;
   ingredients: string[];
   category: Category;
-  id: number;
+  quantity?: number;
 }
 
 export enum Category {

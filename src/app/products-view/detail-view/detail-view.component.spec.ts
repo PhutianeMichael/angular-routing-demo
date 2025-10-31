@@ -8,9 +8,9 @@ describe('DetailViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DetailViewComponent ]
+      declarations: [DetailViewComponent],
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(DetailViewComponent);
     component = fixture.componentInstance;

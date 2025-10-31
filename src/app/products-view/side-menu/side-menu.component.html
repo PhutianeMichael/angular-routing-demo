@@ -1,12 +1,20 @@
-<div class="side-nav" *ngIf="selectedPie$ | async as selectedPie">
-  <button
-    *ngFor="let pie of pies$ | async"
-    class="image-button"
-    (click)="selectPie(pie.id)"
-  >
-    <img
-      [src]="pie.thumb"
-      alt="image of person sticking a fork in a piece of pie"
-    />
-  </button>
-</div>
+@let selectedPie = selectedPie$ | async;
+@let pies = pies$ | async;
+
+@if (selectedPie) {
+  <div class="side-nav" *ngIf="selectedPie$ | async as selectedPie">
+    @for (pie of pies; track pie.id) {
+      <button
+        class="image-button"
+        (click)="selectPie(pie.id)"
+      >
+        <img
+          [ngSrc]="pie.thumb"
+          alt="image of person sticking a fork in a piece of pie"
+          width="100" height="100"
+        />
+      </button>
+    }
+
+  </div>
+}

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { PieService } from '../../services/pie.service';
-import { NgFor, NgIf, AsyncPipe } from '@angular/common';
+import { AsyncPipe, NgFor, NgIf } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
@@ -13,9 +13,10 @@ import { MatButtonModule } from '@angular/material/button';
   ],
   selector: 'app-detail-view',
   templateUrl: './detail-view.component.html',
-  styleUrls: ['./detail-view.component.scss']
+  styleUrls: ['./detail-view.component.scss'],
 })
 export class DetailViewComponent {
+  pieService = inject(PieService);
   selectedPie$ = this.pieService.selectedPie$;
-  constructor(private readonly pieService: PieService,){}
+
 }

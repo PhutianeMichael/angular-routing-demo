@@ -10,5 +10,5 @@ import { SubHeroLogoComponent } from '../../shared-ui/sub-hero-logo/sub-hero-log
   templateUrl: './hero-section.component.html',
 })
 export class HeroSectionComponent {
-  image = 'images/hero-1.png';
+  image = '../../images/hero-1.png';
 }

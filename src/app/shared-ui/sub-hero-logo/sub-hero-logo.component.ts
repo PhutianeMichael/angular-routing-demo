@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   imports: [],
   selector: 'app-sub-hero-logo',
   templateUrl: './sub-hero-logo.component.html',
-  styleUrls: ['./sub-hero-logo.component.scss']
+  styleUrls: ['./sub-hero-logo.component.scss'],
 })
 export class SubHeroLogoComponent {
 
