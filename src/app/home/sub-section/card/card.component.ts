@@ -23,9 +23,10 @@ export class CardComponent {
   readonly activatedRoute = inject(ActivatedRoute);
 
   selectPie(pie: Pie) {
-    this.pieService.setSelectedPie(pie.id);
-    this.router.navigate([`../${ROUTER_TOKENS.SHOP}`], {
+    this.router.navigate([`../${ROUTER_TOKENS.SHOP}`, pie.category], {
       relativeTo: this.activatedRoute,
+      queryParams: { productId: pie.id },
+      queryParamsHandling: "merge"
     });
   }
 }

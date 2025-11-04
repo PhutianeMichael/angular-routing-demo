@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { DetailViewComponent } from './detail-view/detail-view.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { BreadcrumbsComponent } from '../shared-ui/breadcrumbs/breadcrumbs.component';
+import { ActivatedRoute } from '@angular/router';
+import { PieService } from '../services/pie.service';
 
 @Component({
   standalone: true,
@@ -15,4 +17,8 @@ import { BreadcrumbsComponent } from '../shared-ui/breadcrumbs/breadcrumbs.compo
   styleUrls: ['./products-view.component.scss'],
 })
 export class ProductsViewComponent {
+  @Input() set categoryId(val: string) {
+    this.pieService.setSelectedCategory(val);
+  }
+  private readonly pieService = inject(PieService)
 }

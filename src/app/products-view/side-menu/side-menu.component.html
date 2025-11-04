@@ -2,15 +2,19 @@
 @let pies = pies$ | async;
 
 @if (selectedPie) {
-  <div class="side-nav" *ngIf="selectedPie$ | async as selectedPie">
+  <div class="side-nav">
     @for (pie of pies; track pie.id) {
       <button
         class="image-button"
-        (click)="selectPie(pie.id)"
+        [routerLink]="['./']"
+        [queryParams]="{productId: pie.id}"
+        queryParamsHandling="merge"
+        routerLinkActive="active-link"
+        ariaCurrentWhenActive="page"
       >
         <img
           [ngSrc]="pie.thumb"
-          alt="image of person sticking a fork in a piece of pie"
+          [alt]="pie.title"
           width="100" height="100"
         />
       </button>
