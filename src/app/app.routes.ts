@@ -1,10 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ProductsViewComponent } from './products-view/products-view.component';
-import { ContactComponent } from './contact/contact.component';
-import { AboutComponent } from './about/about.component';
-import { PRODUCTS_ROUTES } from './products-view/products.routes';
 import { CartComponent } from './cart/cart.component';
 
 export enum ROUTER_TOKENS {
@@ -28,11 +24,11 @@ export const ROUTES: Routes = [
   },
   {
     path: `${ROUTER_TOKENS.SHOP}/:categoryId`,
-    loadChildren: () => import('./products-view/products.routes').then(p => p.PRODUCTS_ROUTES)
+    loadChildren: () => import('./products-view/products.routes').then(p => p.PRODUCTS_ROUTES),
   },
   {
     path: ROUTER_TOKENS.CONTACT,
-    loadComponent: () => import('./contact/contact.component').then(c => c.ContactComponent)
+    loadComponent: () => import('./contact/contact.component').then(c => c.ContactComponent),
   },
   {
     path: ROUTER_TOKENS.ABOUT,
