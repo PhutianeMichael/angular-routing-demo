@@ -28,16 +28,15 @@ export const ROUTES: Routes = [
   },
   {
     path: `${ROUTER_TOKENS.SHOP}/:categoryId`,
-    component: ProductsViewComponent,
-    children: PRODUCTS_ROUTES,
+    loadChildren: () => import('./products-view/products.routes').then(p => p.PRODUCTS_ROUTES)
   },
   {
     path: ROUTER_TOKENS.CONTACT,
-    component: ContactComponent,
+    loadComponent: () => import('./contact/contact.component').then(c => c.ContactComponent)
   },
   {
     path: ROUTER_TOKENS.ABOUT,
-    component: AboutComponent,
+    loadChildren: () => import('./about/about.module').then(m => m.AboutModule),
   },
   {
     path: ROUTER_TOKENS.CHECKOUT,

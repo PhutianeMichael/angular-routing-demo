@@ -1,5 +1,11 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter, withComponentInputBinding, withDebugTracing } from '@angular/router';
+import {
+  PreloadAllModules,
+  provideRouter,
+  withComponentInputBinding,
+  withDebugTracing,
+  withPreloading,
+} from '@angular/router';
 import { ROUTES } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -7,7 +13,6 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({eventCoalescing: true}),
     provideRouter(
       ROUTES,
-      withDebugTracing(),
       withComponentInputBinding(),
     )],
 };
