@@ -1,19 +1,19 @@
-  <div class="side-nav">
-    @for (pie of pies$ | async; track pie.id) {
-      <button
-        class="image-button"
-        [routerLink]="[customize ? customizeLink : detailsLink]"
-        [queryParams]="{productId: pie.id}"
-        queryParamsHandling="merge"
-        routerLinkActive="active-link"
-        ariaCurrentWhenActive="page"
-      >
-        <img
-          [ngSrc]="pie.thumb"
-          [alt]="pie.title"
-          width="100" height="100"
-        />
-      </button>
-    }
+<div class="side-nav">
+  @for (pie of pies$ | async; track pie.id) {
+    <button
+      class="image-button"
+      [routerLink]="[customize ? customizeLink : detailsLink]"
+      [queryParams]="{productId: pie.id}"
+      queryParamsHandling="merge"
+      routerLinkActive="active-link"
+      ariaCurrentWhenActive="page"
+    >
+      <img
+        [ngSrc]="pie.thumb"
+        [alt]="pie.title"
+        width="100" height="100"
+      />
+    </button>
+  }
 
-  </div>
+</div>

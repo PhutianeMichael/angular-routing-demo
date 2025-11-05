@@ -10,10 +10,10 @@ export const enum PRODUCT_ROUTER_TOKENS {
 export const PRODUCTS_ROUTES: Routes = [
   {
     path: PRODUCT_ROUTER_TOKENS.DETAIL,
-    component: DetailViewComponent
+    component: DetailViewComponent,
   },
   {
     path: PRODUCT_ROUTER_TOKENS.CUSTOMIZE,
-    component: CustomizeViewComponent
-  }
+    component: CustomizeViewComponent,
+  },
 ]

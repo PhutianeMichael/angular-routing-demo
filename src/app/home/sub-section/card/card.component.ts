@@ -25,8 +25,8 @@ export class CardComponent {
   selectPie(pie: Pie) {
     this.router.navigate([`../${ROUTER_TOKENS.SHOP}`, pie.category], {
       relativeTo: this.activatedRoute,
-      queryParams: { productId: pie.id },
-      queryParamsHandling: "merge"
+      queryParams: {productId: pie.id},
+      queryParamsHandling: "merge",
     });
   }
 }

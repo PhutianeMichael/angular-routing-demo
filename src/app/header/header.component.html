@@ -2,7 +2,7 @@
   <div class="site-header-wrapper">
     <h1>
       <button mat-button aria-label="Home" [routerLink]="['/']">
-        <img src="images/logo.png" alt="Bethany's Pie Shop Logo"/>
+        <img ngSrc="images/logo.png" alt="Bethany's Pie Shop Logo" width="150" height="50"/>
       </button>
     </h1>
     <nav>
@@ -11,16 +11,20 @@
           <button class="menu-item" mat-button ariaCurrentWhenActive="page" routerLinkActive="active-link"
                   [matMenuTriggerFor]="menu">Shop <span>&#8964;</span>
             <mat-menu class="menu-dropdown" #menu="matMenu">
-              <button mat-menu-item routerLinkActive="active-link-li" [routerLink]="[ROUTER_TOKENS.SHOP, Category.SEASONAL_PIE]" >
+              <button mat-menu-item routerLinkActive="active-link-li"
+                      [routerLink]="[ROUTER_TOKENS.SHOP, Category.SEASONAL_PIE]">
                 Seasonal Pies
               </button>
-              <button mat-menu-item routerLinkActive="active-link-li" [routerLink]="[ROUTER_TOKENS.SHOP, Category.FRUIT_PIE]">
+              <button mat-menu-item routerLinkActive="active-link-li"
+                      [routerLink]="[ROUTER_TOKENS.SHOP, Category.FRUIT_PIE]">
                 Fruit Pies
               </button>
-              <button mat-menu-item routerLinkActive="active-link-li" [routerLink]="[ROUTER_TOKENS.SHOP, Category.CHEESECAKE]" >
+              <button mat-menu-item routerLinkActive="active-link-li"
+                      [routerLink]="[ROUTER_TOKENS.SHOP, Category.CHEESECAKE]">
                 Cheesecakes
               </button>
-              <button mat-menu-item routerLinkActive="active-link-li" [routerLink]="[ROUTER_TOKENS.SHOP, Category.ALL]">All
+              <button mat-menu-item routerLinkActive="active-link-li" [routerLink]="[ROUTER_TOKENS.SHOP, Category.ALL]">
+                All
                 Pies
               </button>
             </mat-menu>
@@ -47,7 +51,7 @@
             queryParamsHandling="merge"
           >
             <span class="total-items">{{ totalItems() }}</span>
-            <img ngSrc="images/cart-icon.png" alt="shopping cart icon" width="20"  height="20"/>
+            <img ngSrc="images/cart-icon.png" alt="shopping cart icon" width="20" height="20"/>
           </button>
         </li>
       </ul>

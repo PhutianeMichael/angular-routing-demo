@@ -1,37 +1,40 @@
 <div class="cart-wrapper">
   <div class="cart-header"><span>
     Bethany's Pie Shop Shopping Cart
-  </span><button
-    mat-raised-button
-    (click)="close()"
-  >close</button></div>
+  </span>
+    <button
+      mat-raised-button
+      (click)="close()"
+    >close
+    </button>
+  </div>
   <div class="cart-items-wrapper" *ngIf="!submitted; else formSubmitted">
     @for (item of cartItemsPlusQuantity(); track item.id) {
-    <div class="cart-item">
-      <div class="cart-item-image-wrapper">
-        <img [src]="item.thumb" [alt]="item.title" />
-      </div>
-      <div class="cart-item-details-wrapper">
-        <p class="cart-item-name">{{ item.title }}</p>
-        <div class="quantity-selector-wrapper">
-          <div class="quantity-selector">
-            <button (click)="cartService.decrementCartItem(item)">-</button>
-            <span>{{ item.quantity }}</span>
-            <button (click)="cartService.addCartItem(item)">+</button>
+      <div class="cart-item">
+        <div class="cart-item-image-wrapper">
+          <img [src]="item.thumb" [alt]="item.title"/>
+        </div>
+        <div class="cart-item-details-wrapper">
+          <p class="cart-item-name">{{ item.title }}</p>
+          <div class="quantity-selector-wrapper">
+            <div class="quantity-selector">
+              <button (click)="cartService.decrementCartItem(item)">-</button>
+              <span>{{ item.quantity }}</span>
+              <button (click)="cartService.addCartItem(item)">+</button>
+            </div>
           </div>
         </div>
+        <div class="cart-item-price-wrapper">
+          <p class="cart-item-price">{{ item.price }}</p>
+        </div>
       </div>
-      <div class="cart-item-price-wrapper">
-        <p class="cart-item-price">{{ item.price }}</p>
-      </div>
-    </div>
     }
     @if (!cartItemsPlusQuantity().length) {
-    <div class="cart-item">
-      <div class="cart-item-details-wrapper">
-        <p class="cart-item-name">You need pie! Go add some to your cart</p>
+      <div class="cart-item">
+        <div class="cart-item-details-wrapper">
+          <p class="cart-item-name">You need pie! Go add some to your cart</p>
+        </div>
       </div>
-    </div>
     }
     <div class="totals-item">
       <div class="totals-details-wrapper">
@@ -52,11 +55,12 @@
       </div>
       <div class="totals-details-wrapper">
         @if (!loading) {
-        <button mat-button-raised
-        (click)="checkout()">Checkout</button>
+          <button mat-button-raised
+                  (click)="checkout()">Checkout
+          </button>
         }
         @if (loading) {
-        <mat-spinner diameter="40" ></mat-spinner>
+          <mat-spinner diameter="40"></mat-spinner>
         }
       </div>
     </div>
@@ -65,20 +69,21 @@
   <ng-template #formSubmitted>
     <div class="cart-items-wrapper">
       @if (!loading) {
-      <div class="totals-item">
-        <div class="totals-details-wrapper">
-          <div>Thank you for our order!</div>
+        <div class="totals-item">
+          <div class="totals-details-wrapper">
+            <div>Thank you for our order!</div>
+          </div>
+          <div class="totals-details-wrapper">
+            <div>Order# 1664</div>
+          </div>
+          <div class="totals-details-wrapper">
+            <button
+              mat-button-raised
+              (click)="close()"
+            >Close Cart
+            </button>
+          </div>
         </div>
-        <div class="totals-details-wrapper">
-          <div>Order# 1664</div>
-        </div>
-        <div class="totals-details-wrapper">
-          <button
-          mat-button-raised
-          (click)="close()"
-          >Close Cart</button>
-        </div>
-      </div>
       }
     </div>
   </ng-template>

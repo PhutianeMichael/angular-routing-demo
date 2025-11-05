@@ -1,8 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
 import { PieService } from '../../services/pie.service';
-import { AsyncPipe, NgFor, NgIf, NgOptimizedImage } from '@angular/common';
+import { AsyncPipe, NgOptimizedImage } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { tap } from 'rxjs';
 import { PRODUCT_ROUTER_TOKENS } from '../products.routes';
 
 @Component({
@@ -15,7 +14,7 @@ import { PRODUCT_ROUTER_TOKENS } from '../products.routes';
   ],
   selector: 'app-side-menu',
   templateUrl: './side-menu.component.html',
-  styleUrls: ['./side-menu.component.scss']
+  styleUrls: ['./side-menu.component.scss'],
 })
 export class SideMenuComponent {
   @Input() customize = false;

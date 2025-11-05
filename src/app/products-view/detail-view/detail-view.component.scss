@@ -51,6 +51,7 @@
 .ingredient::after {
   content: ', '
 }
+
 .ingredient:last-of-type::after {
   content: ''
 }

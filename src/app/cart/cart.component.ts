@@ -22,7 +22,7 @@ import { ROUTER_TOKENS } from '../app.routes';
 
   ],
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.scss']
+  styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent {
   readonly cartService = inject(CartService);
@@ -44,7 +44,7 @@ export class CartComponent {
     this.loading = true;
 
     this.contactService.submitContactForm(this.model).pipe(
-      takeUntil(this.destroyed$)
+      takeUntil(this.destroyed$),
     ).subscribe(() => {
       this.submitted = true;
       this.loading = false;
@@ -53,7 +53,7 @@ export class CartComponent {
   }
 
   close() {
-    this.router.navigate([{ outlets: {[ROUTER_TOKENS.CART]: null }}],{
+    this.router.navigate([{outlets: {[ROUTER_TOKENS.CART]: null}}], {
       queryParamsHandling: 'merge',
     });
   }

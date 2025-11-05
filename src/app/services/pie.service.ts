@@ -17,7 +17,7 @@ export class PieService {
 
   private readonly activatedRoutes = inject(ActivatedRoute);
   private readonly selectedPie = this.activatedRoutes.queryParamMap.pipe(
-    map((params) => params.get('productId'))
+    map((params) => params.get('productId')),
   );
 
   readonly filteredPies$ = this.selectedCategory.pipe(

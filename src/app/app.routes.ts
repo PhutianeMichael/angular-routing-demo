@@ -29,7 +29,7 @@ export const ROUTES: Routes = [
   {
     path: `${ROUTER_TOKENS.SHOP}/:categoryId`,
     component: ProductsViewComponent,
-    children: PRODUCTS_ROUTES
+    children: PRODUCTS_ROUTES,
   },
   {
     path: ROUTER_TOKENS.CONTACT,
@@ -42,7 +42,7 @@ export const ROUTES: Routes = [
   {
     path: ROUTER_TOKENS.CHECKOUT,
     outlet: ROUTER_TOKENS.CART,
-    component: CartComponent
+    component: CartComponent,
   },
   {
     path: '**',
