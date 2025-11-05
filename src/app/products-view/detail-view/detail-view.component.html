@@ -1,14 +1,24 @@
-<div class="detail" *ngIf="selectedPie$ | async as selectedPie">
+@if (selectedPie(); as selectedPie) {
+<div class="detail">
   <h3>{{ selectedPie.title }}</h3>
   <div class="image-wrapper">
-    <img [src]="selectedPie.image" [alt]="selectedPie.title"/>
+    <img [src]="selectedPie.image" [alt]="selectedPie.title" />
     <div class="description">
       <p>{{ selectedPie.description }}</p>
-      <h4>Ingredients: <span class="ingredient"
-                             *ngFor="let ingredient of selectedPie.ingredients">{{ ingredient }}</span></h4>
+      <h4>Ingredients:</h4>
+      <div class="ingredient_container">
+      @for (ingredient of selectedPie.ingredients; track $index) {
+        <span class="ingredient" >{{ ingredient }}</span>
+      }
+      </div>
       <p class="price">Price: <span>{{ selectedPie.price }}</span></p>
     </div>
   </div>
 
-  <button mat-raised-button>Add To Cart</button>
+  <div class="quantity-selector">
+    <button (click)="cartService.decrementCartItem(selectedPie)">-</button>
+    <span (click)="cartService.addCartItem(selectedPie)">{{ selectedPie?.quantity ? selectedPie?.quantity + ' in Cart' : 'Add to Cart'}}</span>
+    <button (click)="cartService.addCartItem(selectedPie)">+</button>
+  </div>
 </div>
+}

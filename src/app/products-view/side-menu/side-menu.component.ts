@@ -1,25 +1,28 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { PieService } from '../../services/pie.service';
-import { AsyncPipe, NgOptimizedImage } from '@angular/common';
+import { AsyncPipe, NgFor, NgIf, NgOptimizedImage } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { ROUTER_TOKENS } from '../../app.routes';
+import { tap } from 'rxjs';
+import { PRODUCT_ROUTER_TOKENS } from '../products.routes';
 
 @Component({
   standalone: true,
   imports: [
     AsyncPipe,
-    NgOptimizedImage,
     RouterLink,
     RouterLinkActive,
+    NgOptimizedImage,
   ],
   selector: 'app-side-menu',
   templateUrl: './side-menu.component.html',
-  styleUrls: ['./side-menu.component.scss'],
+  styleUrls: ['./side-menu.component.scss']
 })
 export class SideMenuComponent {
-  readonly ROUTER_TOKENS = ROUTER_TOKENS;
+  @Input() customize = false;
   pieService = inject(PieService);
+
+  readonly customizeLink = `./${PRODUCT_ROUTER_TOKENS.CUSTOMIZE}`
+  readonly detailsLink = `./${PRODUCT_ROUTER_TOKENS.DETAIL}`
   pies$ = this.pieService.filteredPies$;
-  selectedPie$ = this.pieService.selectedPie$;
 
 }

@@ -1,15 +1,23 @@
 import { Component, inject, Input } from '@angular/core';
-import { DetailViewComponent } from './detail-view/detail-view.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
-import { BreadcrumbsComponent } from '../shared-ui/breadcrumbs/breadcrumbs.component';
 import { PieService } from '../services/pie.service';
+import { RouterOutlet } from '@angular/router';
+import {
+  MatAccordion,
+  MatExpansionPanel,
+  MatExpansionPanelHeader,
+  MatExpansionPanelTitle,
+} from '@angular/material/expansion';
 
 @Component({
   standalone: true,
   imports: [
-    DetailViewComponent,
     SideMenuComponent,
-    BreadcrumbsComponent,
+    RouterOutlet,
+    MatAccordion,
+    MatExpansionPanel,
+    MatExpansionPanelHeader,
+    MatExpansionPanelTitle,
   ],
   selector: 'app-products-view',
   templateUrl: './products-view.component.html',

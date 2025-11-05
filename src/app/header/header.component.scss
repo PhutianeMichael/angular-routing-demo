@@ -23,7 +23,7 @@
   list-style-type: none;
 }
 
-.site-header-wrapper nav ul li button {
+.site-header-wrapper nav ul li button{
   color: white;
   display: block;
   font-weight: 600;
@@ -47,11 +47,6 @@
   top: -5px;
 }
 
-.menu-item span {
-  position: relative;
-  top: -5px;
-}
-
 .active-link {
   font-size: 16px;
   font-weight: 800;
@@ -60,4 +55,11 @@
 
 .active-link-li {
   background-color: rgb(222, 222, 222);
+}
+
+.total-items {
+  color: white;
+  position: absolute;
+  top: -2px;
+  left: 18px;
 }

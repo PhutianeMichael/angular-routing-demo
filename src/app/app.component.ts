@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { ROUTER_TOKENS } from './app.routes';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,5 @@ import { HeaderComponent } from './header/header.component';
 })
 export class AppComponent {
   title = 'angular-routing-demo';
+  readonly ROUTER_TOKENS = ROUTER_TOKENS;
 }

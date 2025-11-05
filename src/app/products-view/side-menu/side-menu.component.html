@@ -1,12 +1,8 @@
-@let selectedPie = selectedPie$ | async;
-@let pies = pies$ | async;
-
-@if (selectedPie) {
   <div class="side-nav">
-    @for (pie of pies; track pie.id) {
+    @for (pie of pies$ | async; track pie.id) {
       <button
         class="image-button"
-        [routerLink]="['./']"
+        [routerLink]="[customize ? customizeLink : detailsLink]"
         [queryParams]="{productId: pie.id}"
         queryParamsHandling="merge"
         routerLinkActive="active-link"
@@ -21,4 +17,3 @@
     }
 
   </div>
-}

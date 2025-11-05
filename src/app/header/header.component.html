@@ -41,7 +41,14 @@
     <div class="header-icons">
       <ul>
         <li>
-          <button mat-menu-item><img src="images/cart-icon.png" alt="shopping cart icon"/></button>
+          <button
+            mat-menu-item
+            [routerLink]="['/', { outlets}]"
+            queryParamsHandling="merge"
+          >
+            <span class="total-items">{{ totalItems() }}</span>
+            <img ngSrc="images/cart-icon.png" alt="shopping cart icon" width="20"  height="20"/>
+          </button>
         </li>
       </ul>
     </div>
